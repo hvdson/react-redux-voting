@@ -4,11 +4,21 @@ import { createStore } from 'redux'
 import './index.css';
 import App from './App';
 import myApp from './reducers'
+import Results from './components/Results'
 import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(myApp);
+console.log(store)
 function render() {
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(
+    <div className="container">
+      <App store={store}/>
+      <br />
+      <Results store={store}/>
+    </div>
+    ,
+    document.getElementById('root')
+  );
   registerServiceWorker();
 }
 

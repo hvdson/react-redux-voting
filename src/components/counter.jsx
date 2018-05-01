@@ -14,7 +14,6 @@ import { createStore } from 'redux'
  * project.
  */
 
-
 export default class Counter extends Component {
   render() {
     return (
@@ -22,4 +21,3 @@ export default class Counter extends Component {
     )
   }
 }
-
